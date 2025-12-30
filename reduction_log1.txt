@@ -1,0 +1,47 @@
+
+# =====  NGC 3201 B-band 2025 ===== 
+
+  cd /Users/mikako/work/teaching/2025_ObsTech/LCO/data/NGC3201/NGC3201_B_2025/
+
+  funpack *fz
+
+  dfits *fits | fitsort DATE-OBS EXPTIME FILTER
+
+  # e00 is the single file, while e91 is the binary with BPM, ERR etc
+
+  ds9 -scale 99 -cmap  bb  -zoom 8 *e00.fits &
+
+  rm *e00.fits
+  rm *e00.fits.fz
+
+# =====  NGC 3201 V-band  ===== 
+
+   cd /Users/mikako/work/teaching/2025_ObsTech/LCO/data/NGC3201/NGC3201_V
+
+   funpack *fz
+
+  dfits *fits | fitsort DATE-OBS EXPTIME FILTER
+
+  ds9 -scale 99 -cmap  bb  -zoom 8 *e91.fits &
+
+# =====  E3 V-band =====
+
+   cd /Users/mikako/work/teaching/2025_ObsTech/LCO/data/E3/V
+
+   funpack *fz
+   
+   dfits *fits | fitsort DATE-OBS EXPTIME FILTER
+
+   rm lsc*fits
+
+# =====  E3 B-band =====
+
+  cd /Users/mikako/work/teaching/2025_ObsTech/LCO/data/E3/V
+
+  funpack *fz
+
+  dfits *fits | fitsort DATE-OBS EXPTIME FILTER
+
+
+;===== montage ===== 
+http://montage.ipac.caltech.edu/docs/first_mosaic_tutorial.html
